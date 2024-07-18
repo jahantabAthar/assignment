@@ -1,0 +1,22 @@
+.ant-steps-item-tail {
+  display: none !important;
+}
+.ant-steps-item-container{
+  padding-left: 15px !important;
+}
+.anticon{
+  background-color: #145903;
+  padding: 8px;
+  border-radius: 25px;
+}
+.ant-steps-item-container{
+	align-items: center !important;
+  padding-bottom:10px;
+}
+.ant-steps-finish-icon{
+  color: white;
+  padding: 12px;
+}
+.contentDiv{
+  min-height: 600px;
+}
