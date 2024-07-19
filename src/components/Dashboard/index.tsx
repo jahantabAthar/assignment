@@ -15,7 +15,7 @@ const Index: React.FC = () => {
                   <div className="flex-none">Upon completion of all necessary steps and approval by our team, you'll gain the ability to showcase your company on our website and enrich your profile with a portfolio of projects.</div>
             </div>
             <div className="w-1/2 text-right">
-                  <Progress type="circle" percent={pregress} strokeColor={'green'} />
+                  <Progress type="circle" percent={pregress} strokeColor={{'0%': '#008776','100%': '#008776'}} />
             </div>
           </div>
         </div>

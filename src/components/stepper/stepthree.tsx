@@ -9,17 +9,18 @@ const { Dragger } = Upload;
 const props: UploadProps = {
   name: 'file',
   multiple: true,
-  action: 'https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload',
+  action: '',
   onChange(info) {
     const { status } = info.file;
     if (status !== 'uploading') {
       console.log(info.file, info.fileList);
     }
-    if (status === 'done') {
-      message.success(`${info.file.name} file uploaded successfully.`);
-    } else if (status === 'error') {
-      message.error(`${info.file.name} file upload failed.`);
-    }
+    if (status === 'error') {
+     // message.success(`${info.file.name} file uploaded successfully.`);
+    } 
+    // else if (status === 'error') {
+    //   message.error(`${info.file.name} file upload failed.`);
+    // }
   },
   onDrop(e) {
     console.log('Dropped files', e.dataTransfer.files);
@@ -30,13 +31,13 @@ const props: UploadProps = {
 const StepThree: React.FC = () => {
   return (
     <>
-      <div className="min-w-47.5 min-h-120 max-w-4xl flex flex-col">
+      <div className=" min-h-120 flex flex-col">
         <div className="font-bold">Documents</div>
         <div className="mt-3 text-sm font-bold">1: Trade License:</div>
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
@@ -48,7 +49,7 @@ const StepThree: React.FC = () => {
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
@@ -60,7 +61,7 @@ const StepThree: React.FC = () => {
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
@@ -72,7 +73,7 @@ const StepThree: React.FC = () => {
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
@@ -84,7 +85,7 @@ const StepThree: React.FC = () => {
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
@@ -96,7 +97,7 @@ const StepThree: React.FC = () => {
         <div className="mt-5">
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
-              <CloudUploadOutlined />
+              <CloudUploadOutlined className="cloudicon"/>
             </p>
             <p className="ant-upload-text"><span className="text-green-700 font-bold">Click to upload</span> or drap and drop</p>
             <p className="ant-upload-hint">
